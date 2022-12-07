@@ -1,7 +1,15 @@
-function isPalindrome(word) {
-  // Write your algorithm here
+function isPalindrome(word) { 
+  let polishedString = word.replace(/\w+|_/g,"");
+  let reversedstring = polishedString.split("").reverse().join("")
+  console.log(reversedstring, polishedString)
+  if(polishedString != reversedstring){
+    return false;
+  }
+  return true;
+  
 }
-
+let result = isPalindrome("robot")
+console.log(result)
 /* 
   Add your pseudocode here
 */
